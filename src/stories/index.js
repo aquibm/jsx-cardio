@@ -4,14 +4,14 @@ import Button from './Button';
 import Welcome from './Welcome';
 
 storiesOf('Welcome', module)
-  .add('to Storybook', () => (
-    <Welcome showApp={linkTo('Button')}/>
-  ));
+    .add('', () => (
+        <Welcome />
+    ));
 
 storiesOf('Button', module)
-  .add('with text', () => (
-    <Button onClick={action('clicked')}>Hello Button</Button>
-  ))
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
-  ));
+    .add('with text', () => (
+        <Button onClick={action('clicked')}>Hello Button</Button>
+    ))
+    .add('with some emoji', () => (
+        <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
+    ));
