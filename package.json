@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 3000 -s public",
-    "build": "build-storybook -s public"
+    "build": "build-storybook -s public",
+    "deploy": "yarn build && gh-pages -d storybook-static"
   }
 }
