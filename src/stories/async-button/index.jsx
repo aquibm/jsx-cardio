@@ -16,7 +16,7 @@ class AsyncButton extends React.Component {
     }
 
     onClick() {
-        if(this.state.isSaved)
+        if(this.state.isSaved || this.state.isSaving)
             return
 
         this.props.onClick();
