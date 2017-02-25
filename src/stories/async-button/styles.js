@@ -1,50 +1,44 @@
-const lightGreen = '#3CCD94';
+import React from 'react'
 
-const font = {
-    fontSize: '14px',
-    color: 'white',
-    fontWeight: 100,
-    textTransform: 'uppercase',
-    letterSpacing: '2px'
-}
+const lightGreen = '#3CCD94'
+const grey = '#333'
 
-const _dynamic = (isSaving, isSaved) => {
-    if(isSaving) {
-        return {
-            background: 'white',
-            color: '#333',
-            border: '2px solid #333',
-            cursor: 'default'
+const styles = () => (
+    <style jsx>{`
+        .root {
+            margin: 20px 20px;
         }
-    }
 
-    if(isSaved) {
-        return {
-            background: 'white',
-            color: lightGreen,
-            border: `2px solid ${lightGreen}`,
-            cursor: 'default'
+        .root__button {
+            outline: none;
+            border: 2px solid ${lightGreen};
+            cursor: pointer;
+            background: ${lightGreen};
+            padding: 15px 40px;
+            border-radius: 8px;
+            transition: all .5s ease;
+
+            font-size: 14px;
+            color: white;
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-    }
 
-    return {}
-}
+        .root__button--is-saving {
+            background: white;
+            color: ${grey};
+            border: 2px solid ${grey};
+            cursor: default;
+        }
 
-const button = (isSaving, isSaved) => ({
-    outline: 'none',
-    border: `2px solid ${lightGreen}`,
-    cursor: 'pointer',
-    background: lightGreen,
-    padding: '15px 40px',
-    borderRadius: '8px',
-    transition: 'all .5s ease',
-    ...font,
-    ..._dynamic(isSaving, isSaved)
-})
+        .root__button--is-saved {
+            background: white;
+            color: ${lightGreen};
+            border: 2px solid ${lightGreen};
+            cursor: default;
+        }
+    `}</style>
+)
 
-export default {
-    root: {
-        margin: '20px 20px'
-    },
-    button
-}
+export default styles
