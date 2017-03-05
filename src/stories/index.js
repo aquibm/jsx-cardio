@@ -4,10 +4,12 @@ import { host } from 'storybook-host'
 
 import About from './about'
 import AsyncButton from './async-button'
+import Card from './card'
 
-storiesOf('About', module).add('', () => (
-    <About />
-))
+storiesOf('About', module)
+    .add('', () => (
+        <About />
+    ))
 
 storiesOf('Async Button', module)
     .addDecorator(host({
@@ -16,4 +18,16 @@ storiesOf('Async Button', module)
     }))
     .add('', () => (
         <AsyncButton onClick={action('clicked')} onSave={action('saved')} />
+    ))
+
+storiesOf('Card', module)
+    .addDecorator(host({
+        title: 'Card',
+        align: 'center',
+        backdrop: '#FAFAFA'
+    }))
+    .add('', () => (
+        <Card image="https://placeimg.com/50/50/animals"
+              name="Wendy Klein"
+        />
     ))
