@@ -27,7 +27,7 @@ storiesOf('Card', module)
         backdrop: '#FAFAFA'
     }))
     .add('', () => (
-        <Card image="https://placeimg.com/60/60/animals"
+        <Card image="https://placeimg.com/100/100/animals"
               name="Wendy Klein"
               summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
               onFollow={action('followed')}

@@ -55,7 +55,12 @@ const Styles = () => (
             font-size: .8em;
 
             cursor: pointer;
+            transition: all .25s ease;
         }
+
+            .card__action:hover {
+                background: #5da3f5;
+            }
     `}</style>
 )
 
