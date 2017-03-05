@@ -47359,18 +47359,13 @@
 	        { className: "root" },
 	        _react2.default.createElement(
 	            "h1",
-	            null,
+	            { className: "title" },
 	            "JSX Cardio"
-	        ),
-	        _react2.default.createElement(
-	            "p",
-	            null,
-	            "Built so I can practice jsx & experiment with different ways to style components."
 	        ),
 	        _react2.default.createElement(
 	            "style",
 	            { jsx: true },
-	            "\n            .root {\n                font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Arial, sans-serif;\n            }\n        "
+	            "\n            .root {\n                font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Arial, sans-serif;\n                margin: 50px;\n            }\n\n            .title {\n                color: #333;\n                font-weight: 100;\n                text-transform: uppercase;\n            }\n        "
 	        )
 	    );
 	};
@@ -47780,6 +47775,16 @@
 	                )
 	            )
 	        ),
+	        _react2.default.createElement(
+	            'p',
+	            { className: 'credits' },
+	            'Inspired by ',
+	            _react2.default.createElement(
+	                'a',
+	                { className: 'credits__link', href: 'https://dribbble.com/shots/3323652-Card', target: '_blank' },
+	                'owl'
+	            )
+	        ),
 	        (0, _styles2.default)()
 	    );
 	};
@@ -47854,7 +47859,7 @@
 	    return _react2.default.createElement(
 	        'style',
 	        { jsx: true },
-	        '\n        .root {\n            margin: 50px;\n        }\n\n        .card {\n            display: flex;\n            flex-direction: column;\n            background: white;\n            padding: 30px;\n            max-width: 200px;\n            max-height: 300px;\n\n            border: 1px solid #efefef;\n            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);\n\n            text-align: center;\n        }\n\n        .card__avatar {\n            border-radius: 50%;\n        }\n\n        p.card__user {\n            margin: 30px 0 0 0;\n            color: #666;\n            font-size: 1.2em;\n            letter-spacing: 1.2px;\n            font-weight: lighter;\n        }\n\n        p.card__summary {\n            margin: 30px 0;\n            color: #999;\n            letter-spacing: 1.2px;\n            font-weight: lighter;\n        }\n\n        .card__action {\n            min-width: 80%;\n            background: #70B1FC;\n            padding: 10px 20px;\n            border: 0;\n            outline: none;\n            border-radius: 20px;\n            box-shadow: 0px 5px 10px 0px rgba(112, 177, 252, .3);\n\n            color: #fefefe;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n            font-weight: 100;\n            font-size: .8em;\n\n            cursor: pointer;\n            transition: all .25s ease;\n        }\n\n            .card__action:hover {\n                background: #5da3f5;\n            }\n    '
+	        '\n        .root {\n            margin: 50px;\n        }\n\n        .card {\n            display: flex;\n            flex-direction: column;\n            background: white;\n            padding: 30px;\n            max-width: 200px;\n            max-height: 300px;\n\n            border: 1px solid #efefef;\n            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.05);\n\n            text-align: center;\n        }\n\n        .card__avatar {\n            border-radius: 50%;\n        }\n\n        p.card__user {\n            margin: 30px 0 0 0;\n            color: #666;\n            font-size: 1.2em;\n            letter-spacing: 1.2px;\n            font-weight: lighter;\n        }\n\n        p.card__summary {\n            margin: 30px 0;\n            color: #999;\n            letter-spacing: 1.2px;\n            font-weight: lighter;\n        }\n\n        .card__action {\n            min-width: 80%;\n            background: #70B1FC;\n            padding: 10px 20px;\n            border: 0;\n            outline: none;\n            border-radius: 20px;\n            box-shadow: 0px 5px 10px 0px rgba(112, 177, 252, .3);\n\n            color: #fefefe;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n            font-weight: 100;\n            font-size: .8em;\n\n            cursor: pointer;\n            transition: all .25s ease;\n        }\n\n            .card__action:hover {\n                background: #5da3f5;\n            }\n\n        .credits {\n            margin: 30px 0;\n            color: #999;\n            text-align: center;\n        }\n\n            .credits__link {\n                color: #333;\n                text-decoration: none;\n            }\n\n            .credits__link:hover {\n                border-bottom: 1px solid #333;\n            }\n    '
 	    );
 	};
 	
@@ -63424,4 +63429,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=preview.b910d42483c9734ed121.bundle.js.map
+//# sourceMappingURL=preview.b60f9db9975e5353fd48.bundle.js.map
