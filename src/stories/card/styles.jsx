@@ -61,6 +61,21 @@ const Styles = () => (
             .card__action:hover {
                 background: #5da3f5;
             }
+
+        .credits {
+            margin: 30px 0;
+            color: #999;
+            text-align: center;
+        }
+
+            .credits__link {
+                color: #333;
+                text-decoration: none;
+            }
+
+            .credits__link:hover {
+                border-bottom: 1px solid #333;
+            }
     `}</style>
 )
 

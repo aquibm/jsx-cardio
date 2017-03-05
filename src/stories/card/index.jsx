@@ -18,6 +18,7 @@ const Card = ({image, name, summary, onFollow}) => {
                 </div>
             </div>
 
+            <p className="credits">Inspired by <a className="credits__link" href="https://dribbble.com/shots/3323652-Card" target="_blank">owl</a></p>
             { styles() }
         </div>
     )
