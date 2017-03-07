@@ -5,6 +5,7 @@ import { host } from 'storybook-host'
 import About from './about'
 import AsyncButton from './async-button'
 import Card from './card'
+import Checkout from './checkout'
 
 storiesOf('About', module)
     .add('', () => (
@@ -32,4 +33,14 @@ storiesOf('Card', module)
               summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
               onFollow={action('followed')}
         />
+    ))
+
+storiesOf('Checkout', module)
+    .addDecorator(host({
+        title: 'Checkout dialog',
+        align: 'center',
+        backdrop: '#FAFAFA'
+    }))
+    .add('', () => (
+        <Checkout />
     ))
