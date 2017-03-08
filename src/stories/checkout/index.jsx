@@ -3,7 +3,13 @@ import styles from './styles'
 
 const Checkout = ({}) => (
     <div className="root">
-        Hello world!
+        <div className="info">
+            Noot
+        </div>
+
+        <div className="payment">
+            Noot
+        </div>
 
         { styles() }
     </div>
