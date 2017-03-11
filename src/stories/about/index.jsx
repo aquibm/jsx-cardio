@@ -1,21 +1,9 @@
-import React from 'react';
+import React from 'react'
+import s from './style.css'
 
 const About = ({}) => (
-    <div className="root">
-        <h1 className="title">JSX Cardio</h1>
-
-        <style jsx>{`
-            .root {
-                font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Arial, sans-serif;
-                margin: 50px;
-            }
-
-            .title {
-                color: #333;
-                font-weight: 100;
-                text-transform: uppercase;
-            }
-        `}</style>
+    <div className={s.root}>
+        <h1 className={s.title}>JSX Cardio</h1>
     </div>
 )
 

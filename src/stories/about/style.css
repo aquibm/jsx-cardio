@@ -1,0 +1,10 @@
+.root {
+    font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Arial, sans-serif;
+    margin: 50px;
+}
+
+.title {
+    color: #333;
+    font-weight: 100;
+    text-transform: uppercase;
+}
