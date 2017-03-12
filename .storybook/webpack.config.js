@@ -1,10 +1,12 @@
-const path = require('path');
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const postcssNested = require('postcss-nested')
 
 module.exports = {
     module: {
         loaders: [{
             test: /\.css$/,
-            loader: 'style!css?modules&localIdentName=[name]_[local]_[hash:base64:3]',
+            loader: 'style!css?modules&localIdentName=[name]_[local]_[hash:base64:3]!postcss',
             include: path.resolve(__dirname, '../')
         }]
     },
@@ -17,7 +19,8 @@ module.exports = {
                     'Firefox ESR',
                     'not ie < 9'
                 ]
-            })
+            }),
+            postcssNested()
         ]
     }
 }
