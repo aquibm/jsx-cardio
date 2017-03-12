@@ -1,25 +1,24 @@
 import React, { PropTypes } from 'react'
-import styles from './styles.jsx'
+import s from './style.css'
 
 const Card = ({image, name, summary, onFollow}) => {
     return (
-        <div className="root">
-            <div className="card">
+        <div className={s.root}>
+            <div className={s.card}>
                 <div>
-                    <img className="card__avatar" src={image} alt={name} />
+                    <img className={s.avatar} src={image} alt={name} />
                 </div>
 
-                <p className="card__user">{name}</p>
+                <p className={s.name}>{name}</p>
 
-                <p className="card__summary">{summary}</p>
+                <p className={s.summary}>{summary}</p>
 
                 <div>
-                    <button className="card__action" onClick={onFollow}>Follow</button>
+                    <button className={s.button} onClick={onFollow}>Follow</button>
                 </div>
             </div>
 
-            <p className="credits">Inspired by <a className="credits__link" href="https://dribbble.com/shots/3323652-Card" target="_blank">owl</a></p>
-            { styles() }
+            <p className={s.credits}>Inspired by <a href="https://dribbble.com/shots/3323652-Card" target="_blank">owl</a></p>
         </div>
     )
 }
