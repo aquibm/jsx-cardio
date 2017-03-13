@@ -2,10 +2,10 @@ import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
 import { host } from 'storybook-host'
 
-import About from './about'
-import AsyncButton from './async-button'
-import Card from './card'
-import Checkout from './checkout'
+import About from './About'
+import AsyncButton from './AsyncButton'
+import Card from './Card'
+import Checkout from './Checkout'
 
 storiesOf('About', module)
     .add('', () => (

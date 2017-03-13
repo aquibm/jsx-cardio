@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import classNames from 'classnames'
 
-import SimpleLoader from './simple-loder'
+import SimpleLoader from '../../components/SimpleLoader'
 import s from './style.css'
 
 class AsyncButton extends React.Component {
