@@ -1,40 +1,27 @@
 import React, { PropTypes } from 'react'
-import styles from './styles'
+import s from './style.css'
 
 const Checkout = ({}) => (
-    <div className="root">
-        <div className="info">
-            <h1 className="info__header">Upgrade to Awesome!</h1>
+    <div className={s.root}>
+        <div className={s.info}>
+            <h1 className={s.infoHeader}>Upgrade to Awesome!</h1>
 
-            <p className="info__summary">Unlock more room in your Buffer, extra social accounts and more!</p>
+            <p className={s.infoSummary}>Unlock more room in your Buffer, extra social accounts and more!</p>
 
-            <h2 className="info__pricing">
-                <span className="info__pricing__wrap">
-                    <span className="info__pricing__cost">$250</span>
-                    <span className="info__pricing__period">/yr</span>
+            <h2 className={s.infoPricing}>
+                <span className={s.infoPricingWrap}>
+                    <span className={s.infoPricingCost}>$250</span>
+                    <span className={s.infoPricingPeriod}>/yr</span>
                 </span>
             </h2>
 
-            <p className="info__offer"><strong>15% discount</strong> compared to the monthly plan.</p>
-
-            <div className="info__toggle-button">
-                <ul className="info__toggle-button__list">
-                    <li className="info__toggle-button__list-item">Monthly</li>
-                    <li className="info__toggle-button__list-item info__toggle-button__list-item--active">Yearly</li>
-                </ul>
-            </div>
+            <p className={s.infoOffer}><strong>15% discount</strong> compared to the monthly plan.</p>
         </div>
 
-        <div className="payment">
+        <div className={s.payment}>
             Noot
         </div>
-
-        { styles() }
     </div>
 )
-
-Checkout.propTypes = {
-
-}
 
 export default Checkout
