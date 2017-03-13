@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
-import styles from './styles'
+import classNames from 'classnames'
+
 import SimpleLoader from './simple-loder'
+import s from './style.css'
 
 class AsyncButton extends React.Component {
     constructor(props) {
@@ -21,9 +23,7 @@ class AsyncButton extends React.Component {
 
         this.props.onClick();
 
-        this.setState({
-            isSaving: true
-        })
+        this.setState({ isSaving: true })
 
         setTimeout(() => {
             this.setState({
@@ -42,23 +42,33 @@ class AsyncButton extends React.Component {
         })
     }
 
+    buttonText() {
+        if(this.state.isSaving) {
+            return <span>Saving <SimpleLoader /></span>
+        }
+
+        if(this.state.isSaved) {
+            return <span>&#10003; Saved</span>
+        }
+
+        return <span>Save Changes</span>
+    }
+
     render() {
-        const buttonClass = `root__button ${this.state.isSaving ?
-            'root__button--is-saving' : ''} ${this.state.isSaved ?
-                'root__button--is-saved' : ''}`
+        const buttonClasses = classNames({
+            [s.button]: true,
+            [s.isSaving]: this.state.isSaving,
+            [s.isSaved]: this.state.isSaved
+        })
 
         return (
-            <div className="root">
-                <button className={buttonClass} onClick={this.onClick}>
-                    { !this.state.isSaving && !this.state.isSaved && <span>Save Changes</span> }
-                    { this.state.isSaving && <span>Saving<SimpleLoader /></span>}
-                    { this.state.isSaved && <span>&#10003; Saved</span> }
+            <div className={s.root}>
+                <button className={buttonClasses} onClick={this.onClick}>
+                    { this.buttonText() }
                 </button>
                 
                 <p><a href="#" onClick={this.reset}>Reset</a></p>
                 <p>Inspired by <a href="https://dribbble.com/shots/2839483-Save-Button-Animation" target="_blank">Dan Strogiy</a></p>
-
-                { styles() }
             </div>
         )
     }
